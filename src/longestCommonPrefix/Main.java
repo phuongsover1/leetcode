@@ -23,18 +23,16 @@ public class Main {
     }
 
 
-    StringBuilder result = new StringBuilder();
     for (int j = 0; j < minLength ; j++) {
       char currentChar = strs[0].charAt(j);
       for (int i = 1; i < strs.length; i++) {
         if (currentChar != strs[i].charAt(j)) {
-          return result.toString();
+          return strs[0].substring(0, j);
         }
       }
 
-      result.append(currentChar);
     }
 
-    return result.toString();
+    return strs[0].substring(0, minLength);
   }
 }
