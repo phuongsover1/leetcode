@@ -1,0 +1,19 @@
+I -> IV (4), IX(9)
+X -> XL (50), XC (90)
+C -> CD (500), CM (900)
+
+
+LVIII
+for (I = 0; I < S.LENGTH; I++) {
+    // NEU VAO PATTERN DAC BIET -> CHECK THANG TIEP THEO COI PHAI KHONG ->
+        NEU KHONG -> NEXt
+        neu PHAI -> CHECK THANG TIEP THEO CO PHAI LA THANG CUOI CUNG
+            -> phai -> BREAK RA
+            -> KHONG PHAI -> I+=1
+
+
+            -----
+            cHECK NHU THE NAO ???
+            map all (m -> 1000 : 0, d -> 500:0, c -> 100: 0, l -> 50:0 , x -> 10:0, v -> 5:0, i -> 1:0, CM -> 900: 0, CD -> 400:0 , XC -> 90:0 , XL-> 40:0, IX -> 9:0, IV -> 4:0)
+            map dac biet (C, X, I)
+}
