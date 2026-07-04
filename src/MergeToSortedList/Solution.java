@@ -65,31 +65,22 @@ if b != null
     ListNode resultHead = new ListNode();
     ListNode resultCur = resultHead;
     
-    ListNode a = new ListNode(list1.val, list1.next);
-    ListNode b = new ListNode(list2.val, list2.next);
     
-    while (a != null && b != null) {
-      if (a.val < b.val) {
-        resultCur.next = new ListNode(a.val, a.next);
+    while (list1 != null && list2 != null) {
+      if (list1.val <= list2.val) {
+        resultCur.next = list1;
         resultCur = resultCur.next;
-        a = a.next;
-      } else if (a.val == b.val) {
-        resultCur.next = new ListNode(a.val, a.next);
-        resultCur = resultCur.next;
-        resultCur.next = new ListNode(b.val, b.next);
-        resultCur = resultCur.next;
-        a = a.next;
-        b = b.next;
+        list1 = list1.next;
       } else {
-        resultCur.next = new ListNode(b.val, b.next);
+        resultCur.next = list2;
         resultCur = resultCur.next;
-        b = b.next;
+        list2 = list2.next;
       }
     }
-    if (a != null)
-      resultCur.next = a;
-    if (b != null)
-      resultCur.next = b;
+    if (list1 != null)
+      resultCur.next = list1;
+    if (list2 != null)
+      resultCur.next = list2;
     return resultHead.next;
   }
 
